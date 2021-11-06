@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://xolonium-regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://gYOdy1Mu1n4.jpg" type="Texture" id=2]
+[ext_resource path="res://ieFha7drjOw.jpg" type="Texture" id=3]
+[ext_resource path="res://Button.gd" type="Script" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 62
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 42
+outline_color = Color( 0.65098, 0.658824, 0.705882, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventKey" id=4]
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ieFha7drjOw" type="Sprite" parent="TextureRect"]
+modulate = Color( 0.501961, 0.47451, 0.47451, 1 )
+position = Vector2( 541.155, 272.522 )
+scale = Vector2( 0.437485, 0.445002 )
+texture = ExtResource( 3 )
+
+[node name="gYOdy1Mu1n4" type="Sprite" parent="TextureRect"]
+visible = false
+modulate = Color( 1, 1, 1, 0.415686 )
+position = Vector2( 956.128, 544.243 )
+scale = Vector2( 0.753938, 0.802445 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+light_mask = 7
+material = SubResource( 1 )
+margin_left = 106.927
+margin_top = 240.315
+margin_right = 935.927
+margin_bottom = 315.315
+custom_fonts/font = SubResource( 2 )
+text = "Create your first IT-event"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 456.528
+margin_top = 359.231
+margin_right = 591.528
+margin_bottom = 417.231
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 5 )
+text = "Start!"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

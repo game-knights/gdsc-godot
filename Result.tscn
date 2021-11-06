@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://image_2021-11-05_21-01-13.png" type="Texture" id=1]
+[ext_resource path="res://xolonium-regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://SourceSansPro-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://.import/aaa.gd" type="Script" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 62
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 42
+outline_color = Color( 0.65098, 0.658824, 0.705882, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="InputEventKey" id=7]
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 7 )
+
+[node name="Control" type="Control"]
+anchor_left = -0.105
+anchor_top = -0.171
+anchor_right = 1.135
+anchor_bottom = 1.0
+margin_left = 107.52
+margin_top = 102.6
+margin_right = -138.24
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="image_2021-11-05_21-01-13" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.376471 )
+position = Vector2( 280.674, 9.72501 )
+scale = Vector2( 2.86343, 2.86343 )
+texture = ExtResource( 1 )
+offset = Vector2( 84.8389, 87.4147 )
+
+[node name="Congrats" type="Label" parent="."]
+light_mask = 7
+material = SubResource( 1 )
+anchor_left = -0.107
+anchor_top = -0.168
+anchor_right = 1.133
+anchor_bottom = 1.037
+margin_left = 228.704
+margin_top = 142.618
+margin_right = -212.056
+margin_bottom = -505.382
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Congratulations!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+anchor_left = 0.153968
+anchor_top = 0.476181
+anchor_right = 0.852968
+anchor_bottom = 0.602181
+margin_left = 0.427261
+margin_top = -0.208344
+margin_right = -0.348755
+margin_bottom = 0.19165
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ты нашел спонсоров, еду, участников. Но что-то пошло не так!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="FailText" type="Label" parent="."]
+anchor_left = 0.145387
+anchor_top = 0.590217
+anchor_right = 0.843139
+anchor_bottom = 0.712261
+margin_right = 0.502014
+margin_bottom = -0.226349
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Ты опоздал на два часа, забыл призы и заказал мало пиццы.
+ Тебе еще учиться и учиться, сынок"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 397.794
+margin_top = 463.999
+margin_right = 616.794
+margin_bottom = 521.999
+custom_fonts/font = SubResource( 4 )
+shortcut = SubResource( 6 )
+text = "Ладно"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://.import/Button2.gd" type="Script" id=1]
+[ext_resource path="res://fy1hS8AIj7E.jpg" type="Texture" id=2]
+[ext_resource path="res://xolonium-regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://SourceSansPro-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://SourceSansPro-SemiBold.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 62
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 36
+font_data = ExtResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fy1hS8AIj7E" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.486275 )
+position = Vector2( 505.515, 278.834 )
+scale = Vector2( 0.528616, 0.528616 )
+texture = ExtResource( 2 )
+
+[node name="Congrats" type="Label" parent="."]
+light_mask = 7
+material = SubResource( 1 )
+anchor_left = -0.107
+anchor_top = -0.168
+anchor_right = 1.133
+anchor_bottom = 1.037
+margin_left = 228.704
+margin_top = 142.618
+margin_right = -212.056
+margin_bottom = -505.382
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Точка кипения"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+anchor_left = 0.149318
+anchor_top = 0.311089
+anchor_right = 0.914724
+anchor_bottom = 0.490423
+margin_left = -38.074
+margin_top = -26.0807
+margin_right = 15.15
+margin_bottom = -25.6807
+rect_pivot_offset = Vector2( 627.814, -601.923 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Не стоит приезжать за два часа. У нас был случай, когда мы приехали за час до начала, а техников не было, так как это выходной день. В итоге остались без трансляции и презентаций"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 472.176
+margin_top = 432.977
+margin_right = 556.176
+margin_bottom = 484.977
+custom_fonts/font = SubResource( 4 )
+text = "Дальше"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

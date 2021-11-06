@@ -9,8 +9,9 @@ var speed = 200
 var vel = Vector2()
 
 func open_dialog(number):
-	if Input.is_action_pressed("player_w"):
-		
+	#print("Good")
+	#if Input.is_action_pressed("player_w"):
+	get_tree().change_scene("res://Skuratov.tscn")
 
 func get_input():
 	vel = Vector2()

@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprite2.gd" type="Script" id=1]
+[ext_resource path="res://Sprite3.gd" type="Script" id=2]
+[ext_resource path="res://Sprite.gd" type="Script" id=3]
+[ext_resource path="res://SourceSansPro-SemiBold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://image 29.png" type="Texture" id=5]
+[ext_resource path="res://image 30.png" type="Texture" id=6]
+[ext_resource path="res://image 27.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_color = Color( 0.0470588, 0.0431373, 0.0431373, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Map" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 175.0
+margin_top = -16.0
+margin_right = -119.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 252.314, 470.447 )
+texture = ExtResource( 5 )
+script = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 274.336, 251.864 )
+texture = ExtResource( 7 )
+script = ExtResource( 1 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 492.585, 351.651 )
+texture = ExtResource( 6 )
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 95.8621
+margin_top = 52.1356
+margin_right = 624.862
+margin_bottom = 106.136
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Выбирай округ для поисков"
+__meta__ = {
+"_edit_use_anchors_": false
+}

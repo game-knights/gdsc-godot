@@ -23,8 +23,10 @@ func number_system():
 func _ready():
 	var score_field = get_node("score/Label")
 	score_field.set_text("Score: " + number_system())
-	pass # Replace with function body.
 
+func _process(delta):
+	var score_field = get_node("score/Label")
+	score_field.set_text("Score: " + number_system())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

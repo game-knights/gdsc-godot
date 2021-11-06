@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://maps/adci.png" type="Texture" id=1]
 [ext_resource path="res://adci_map.gd" type="Script" id=2]
+[ext_resource path="res://maps/skuratov.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7451.27, 822.265 )
@@ -10,12 +11,21 @@ extents = Vector2( 7451.27, 822.265 )
 extents = Vector2( 10, 241.843 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 97.9894, 100.482 )
+extents = Vector2( 101.301, 122.346 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 96.7721, 100.638 )
 
 [node name="StaticBody2D" type="StaticBody2D"]
 script = ExtResource( 2 )
 
+[node name="skuratov" type="Sprite" parent="."]
+position = Vector2( 512.195, 301.366 )
+scale = Vector2( 0.838895, 0.554361 )
+texture = ExtResource( 3 )
+
 [node name="adci" type="Sprite" parent="."]
+visible = false
 position = Vector2( 511.727, 299.066 )
 scale = Vector2( 0.838778, 0.553704 )
 texture = ExtResource( 1 )
@@ -38,7 +48,13 @@ position = Vector2( 251.862, 285.265 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 21.2372, 44.8341 )
+position = Vector2( 601.17, 26.0376 )
 shape = SubResource( 3 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 411.944, 332.249 )
+shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

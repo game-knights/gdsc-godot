@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://5InLaYuAbso.jpg" type="Texture" id=1]
+[ext_resource path="res://.import/Button.gd" type="Script" id=2]
+[ext_resource path="res://xolonium-regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://SourceSansPro-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="ShaderMaterial" id=8]
+
+[sub_resource type="DynamicFont" id=9]
+size = 62
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 26
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 42
+outline_color = Color( 0.65098, 0.658824, 0.705882, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="InputEventKey" id=7]
+
+[sub_resource type="ShortCut" id=12]
+shortcut = SubResource( 7 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5InLaYuAbso" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.376471 )
+position = Vector2( 590.909, 209.263 )
+scale = Vector2( 0.43198, 0.43198 )
+texture = ExtResource( 1 )
+offset = Vector2( -224.356, 193.142 )
+
+[node name="Congrats" type="Label" parent="."]
+light_mask = 7
+material = SubResource( 8 )
+anchor_left = -0.107
+anchor_top = -0.168
+anchor_right = 1.133
+anchor_bottom = 1.037
+margin_left = 228.704
+margin_top = 142.618
+margin_right = -212.056
+margin_bottom = -505.382
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Промах :("
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+anchor_left = 0.153968
+anchor_top = 0.476181
+anchor_right = 0.852968
+anchor_bottom = 0.602181
+margin_left = 0.427261
+margin_top = -0.208344
+margin_right = -0.348755
+margin_bottom = 0.19165
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "На мероприятие пришли гости с улицы, не отказывать же им. А пиццы на участников мероприятия не хватило, все ушли голодными"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 397.794
+margin_top = 463.999
+margin_right = 616.794
+margin_bottom = 521.999
+custom_fonts/font = SubResource( 11 )
+shortcut = SubResource( 12 )
+text = "Ладно"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
